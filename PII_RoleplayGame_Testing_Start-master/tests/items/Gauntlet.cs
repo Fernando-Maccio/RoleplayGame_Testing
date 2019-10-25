@@ -42,4 +42,14 @@ namespace RoleplayGame.Library.Test
             Assert.AreEqual(1, result);
         }
     }
+    public class MagicRemove
+    {
+        [Test]
+        public void MagicRemovedTest10()
+        {
+            Wizard Fernando = new Wizard("Fernando"); 
+            Fernando.RemoveItem(Fernando.Items[0]);
+            Assert.AreEqual(0, Fernando.DefensePower);
+        }
+    }
 }
