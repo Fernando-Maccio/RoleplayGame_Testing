@@ -46,5 +46,21 @@ namespace RoleplayGame.Library.Test
             int secondExpected = 80;
             Assert.AreEqual(secondExpected, elf.AttackPower);
         }
+
+        [Test]
+        public void TestRemoveNonExistentItem13()
+        {
+            Elf elf = new Elf("Elf");
+            Stick stick = new Stick();
+
+            try
+            {
+                elf.RemoveItem(stick);
+            }
+            catch (System.Exception exception)
+            {
+                Assert.IsInstanceOf(typeof(ItemNotFoundException), exception);
+            }
+        }
     }
 }
