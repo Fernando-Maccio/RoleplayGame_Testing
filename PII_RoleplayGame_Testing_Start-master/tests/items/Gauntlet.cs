@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using RoleplayGame.Items;
 using RoleplayGame.Characters;
+using RoleplayGame.Encounters;
 
 namespace RoleplayGame.Library.Test
 {
