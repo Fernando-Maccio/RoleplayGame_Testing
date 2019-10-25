@@ -20,5 +20,15 @@ namespace RoleplayGame.Library.Test
             int expected = (numberOfGems * 30) + 1;
             Assert.AreEqual(expected, gauntlet.AttackPower);
         }
+
+        [Test]
+        public void TestMagicStickDefensePower2()
+        {
+            Magic magic = new Magic();
+            MagicStick magicStick = new MagicStick();
+
+            int expected = magic.DefensePower;
+            Assert.AreEqual(expected, magicStick.DefensePower);
+        }
     }
 }
