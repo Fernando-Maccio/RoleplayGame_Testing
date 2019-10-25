@@ -62,5 +62,19 @@ namespace RoleplayGame.Library.Test
                 Assert.IsInstanceOf(typeof(ItemNotFoundException), exception);
             }
         }
+
+        [Test]
+        public void TestRemoveNonExistentItem11()
+        {
+            Elf elf = new Elf("Elf");
+            Stick stick = new Stick();
+            Magic magic = new Magic();
+
+            elf.AddItem(stick);
+            elf.AddItem(magic);
+
+            int expected = stick.AttackPower + magic.AttackPower;
+            Assert.AreEqual(expected, elf.AttackPower);
+        }
     }
 }
