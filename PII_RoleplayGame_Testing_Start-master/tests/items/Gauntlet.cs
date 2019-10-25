@@ -132,4 +132,34 @@ namespace RoleplayGame.Library.Test
 
        
     }
+    public class ElfTest
+    {
+        [Test]
+        public void TestElfCreation3()
+        {
+            int result = 0;
+            Elf Fran = new Elf("Francisco");
+            int health = Fran.Health;
+            foreach(IItem item in Fran.Items)
+            {
+                if(item is Robes)
+                {
+                    result += 1;
+                }
+            }
+
+            Assert.AreEqual(120, health);
+            Assert.AreEqual(1, result);
+        }
+    }
+    public class MagicRemove
+    {
+        [Test]
+        public void MagicRemovedTest10()
+        {
+            Wizard Fernando = new Wizard("Fernando"); 
+            Fernando.RemoveItem(Fernando.Items[0]);
+            Assert.AreEqual(0, Fernando.DefensePower);
+        }
+    }
 }
