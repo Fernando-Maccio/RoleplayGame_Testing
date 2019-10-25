@@ -12,6 +12,24 @@ namespace RoleplayGame.Library.Test
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(2)]
+         public void TestMagicStickAttack1()
+         {
+             MagicStick magicStick = new MagicStick();
+             int expected = 89;
+             Assert.AreEqual(expected, magicStick.AttackPower);
+         }
+
+        [Test]
+         public void TestCharacterDefense()
+         {
+             Elf character = new Elf("sofia");
+             character.AddItem(new Magic());
+             int expected = 32;
+             Assert.AreEqual(32, character.DefensePower);
+
+         }
+        // public void TestCharacterRemover
+    
         public void TestGauntletPowerWithManyGem(int numberOfGems)
         {
             Gauntlet gauntlet = new Gauntlet();
@@ -56,5 +74,7 @@ namespace RoleplayGame.Library.Test
             Assert.AreEqual(result2,1);
 
         }
+
+       
     }
 }
