@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using RoleplayGame.Items;
+using RoleplayGame.Characters;
 
 namespace RoleplayGame.Library.Test
 {
@@ -29,6 +30,21 @@ namespace RoleplayGame.Library.Test
 
             int expected = magic.DefensePower;
             Assert.AreEqual(expected, magicStick.DefensePower);
+        }
+
+        [Test]
+        public void TestCharacterWithMagicAttackPower7()
+        {
+            Elf elf = new Elf("Elf");
+
+            int firstExpected = 0;
+            Assert.AreEqual(firstExpected, elf.AttackPower);
+
+            Magic magic = new Magic();
+            elf.AddItem(magic);
+
+            int secondExpected = 80;
+            Assert.AreEqual(secondExpected, elf.AttackPower);
         }
     }
 }
