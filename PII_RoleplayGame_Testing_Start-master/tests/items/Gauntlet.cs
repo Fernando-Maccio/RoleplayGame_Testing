@@ -64,7 +64,7 @@ namespace RoleplayGame.Library.Test
         }
 
         [Test]
-        public void TestRemoveNonExistentItem11()
+        public void TestAttackPower2Items11()
         {
             Elf elf = new Elf("Elf");
             Stick stick = new Stick();
